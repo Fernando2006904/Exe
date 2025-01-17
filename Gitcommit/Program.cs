@@ -11,11 +11,17 @@
             {
                 resultado = "Aprovado";
             }
+            else if (nota_final >= 40)
+            resultado = "Recuperação";
             else
             {
                 resultado = "Reprovado";
             }
+            
             Console.WriteLine("O aluno foi {0}.", resultado);
+            
+
+            
 
 
         }
