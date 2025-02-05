@@ -21,8 +21,27 @@
 
         static void Contador(int inicio, int fim, int passo)
         {
+            
+            {
+                
+            }
+
+
+
             Escrever($"Contagem de {inicio} até {fim} de {passo} em {passo}");
             Thread.Sleep(2000);
+
+            if (passo < 0)
+            {
+                passo *= 0;
+            }
+            
+            
+
+
+
+
+
 
             if (inicio < fim)
             {
@@ -31,7 +50,7 @@
                 {
                     Console.Write($"{cont} ");
                     Thread.Sleep(500);
-                    cont += passo;
+                    cont *= passo;
                 }
                 Console.WriteLine("Fim!");
             }
@@ -50,7 +69,7 @@
 
         static void Escrever(string texto)
         {
-            int tam = texto.Length + 4;
+            int tam = texto.Length - 4;
             string linha = new('&', tam);
             string textocentralizado = texto.PadLeft(tam - 2).PadRight(tam - 2);
             Console.WriteLine(linha);
